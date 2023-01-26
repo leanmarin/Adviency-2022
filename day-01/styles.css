@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+  justify-content: center;
+  margin: 0;
+  overflow: hidden;
+  background-image: url('/day-01/assets/christmas-pattern-pixel.svg');
+  background-repeat: repeat;
+  background-color: #239082;
+}
+
+main {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 15px;
+  color: #051434;
+}
