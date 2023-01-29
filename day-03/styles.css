@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;500&display=swap');
+
+:root {
+  --color-primary: #e24655;
+  --color-secondary: #218070;
+  --color-dark-blue: #051434;
+  --color-light: #fde3bb;
+  --color-yellow: #faa409;
+  --color-red: #f50020;
+
+  --shadow-color: 170deg 76% 13%;
+  --shadow-elevation-low:
+    0px 0.2px 0.2px hsl(var(--shadow-color) / 0.46),
+    0px 0.3px 0.3px -1.3px hsl(var(--shadow-color) / 0.45),
+    0px 0.8px 0.9px -2.6px hsl(var(--shadow-color) / 0.44);
+  --shadow-elevation-medium:
+    0px 0.2px 0.2px hsl(var(--shadow-color) / 0.39),
+    0px 0.5px 0.6px -0.6px hsl(var(--shadow-color) / 0.38),
+    0.1px 1px 1.1px -1.3px hsl(var(--shadow-color) / 0.38),
+    0.1px 2px 2.2px -1.9px hsl(var(--shadow-color) / 0.37),
+    0.2px 4px 4.4px -2.6px hsl(var(--shadow-color) / 0.36);
+  --shadow-elevation-high:
+    0px 0.2px 0.2px hsl(var(--shadow-color) / 0.36),
+    0.1px 1px 1.1px -0.3px hsl(var(--shadow-color) / 0.36),
+    0.1px 1.8px 2px -0.6px hsl(var(--shadow-color) / 0.35),
+    0.2px 2.8px 3.1px -0.9px hsl(var(--shadow-color) / 0.35),
+    0.2px 4.1px 4.6px -1.2px hsl(var(--shadow-color) / 0.35),
+    0.3px 5.9px 6.6px -1.4px hsl(var(--shadow-color) / 0.35),
+    0.5px 8.5px 9.5px -1.7px hsl(var(--shadow-color) / 0.34),
+    0.7px 11.9px 13.2px -2px hsl(var(--shadow-color) / 0.34),
+    0.9px 16.5px 18.3px -2.3px hsl(var(--shadow-color) / 0.34),
+    1.2px 22.3px 24.8px -2.6px hsl(var(--shadow-color) / 0.33);
+}
+
+/* UTILITIES */
+
+.sr-only {
+  border-width: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* STYLES */
+
+* {
+  box-sizing: border-box;
+  font-family: 'Kiwi Maru', sans-serif;
+  margin: 0;
+}
+
+body {
+  align-items: center;
+  background-color: var(--color-secondary);
+  background-image: url('/day-01/assets/christmas-pattern-pixel.svg');
+  background-repeat: repeat;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  margin: 0;
+  min-width: 490px;
+  overflow: hidden;
+}
+
+main {
+  background-color: #fff;
+  border: 5px solid var(--color-dark-blue);
+  border-radius: 15px;
+  box-shadow: var(--shadow-elevation-high);
+  color: var(--color-dark-blue);
+  padding: 0rem 0rem 1rem 0rem;
+}
+
+h1 {
+  color: var(--color-red);
+  font-size: 3rem;
+  margin: 0.5rem 2rem;
+}
+
+form {
+  align-items: stretch;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 10px 20px;
+}
+
+#input-gift {
+  border: 3px solid var(--color-secondary);
+  border-radius: 5px;
+  font-size: 1.2rem;
+  padding: 5px;
+  width: 70%;
+}
+
+#input-gift:hover {
+  box-shadow: 1px 1px 0px var(--color-dark-blue);
+  transition: all 200ms ease-in;
+}
+
+#btn {
+  background-color: var(--color-secondary);
+  border: 0px;
+  border: 3px solid var(--color-secondary);
+  border-radius: 3px;
+  color: #fff;
+  font-size: 1.2rem;
+  padding-bottom: 4px;
+}
+
+#btn:hover {
+  box-shadow: 1px 1px 0px var(--color-dark-blue);
+  transition: all 200ms ease-in;
+}
+
+#btn:active {
+  filter: none;
+  transform: translate(1px, 1px);
+}
+
+ul {
+  font-size: 1.2rem;
+  list-style: none;
+  padding: 0rem 0rem;
+}
+
+li {
+  margin: 0rem;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+li:nth-child(even) {
+  background-color: var(--color-yellow);
+}
+
+li:nth-child(odd) {
+  background-color: var(--color-light);
+}
+
+li:hover {
+  border-bottom: 5px solid var(--color-dark-blue);
+  border-top: 2px solid var(--color-dark-blue);
+  font-size: 1.3rem;
+  transition: all 150ms ease-in-out;
+}
+
+.shake {
+  animation: shake-animation 4.72s ease infinite; 
+  transform-origin: 50% 50%;
+}
+
+@keyframes shake-animation {
+   0% { transform:translate(0,0) }
+  1.78571% { transform:translate(5px,0) }
+  3.57143% { transform:translate(0,0) }
+  5.35714% { transform:translate(5px,0) }
+  7.14286% { transform:translate(0,0) }
+  8.92857% { transform:translate(5px,0) }
+  10.71429% { transform:translate(0,0) }
+  100% { transform:translate(0,0) }
+}
