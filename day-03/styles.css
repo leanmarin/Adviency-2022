@@ -81,6 +81,7 @@ h1 {
   color: var(--color-red);
   font-size: 3rem;
   margin: 0.5rem 2rem;
+  text-align: center;
 }
 
 form {
@@ -144,6 +145,10 @@ li:nth-child(odd) {
   background-color: var(--color-light);
 }
 
+li:last-child {
+  animation: append-animate 200ms ease-in-out;
+}
+
 li:hover {
   border-bottom: 5px solid var(--color-dark-blue);
   border-top: 2px solid var(--color-dark-blue);
@@ -156,8 +161,10 @@ li:hover {
   transform-origin: 50% 50%;
 }
 
+/* ANIMATIONS */
+
 @keyframes shake-animation {
-   0% { transform:translate(0,0) }
+  0% { transform:translate(0,0) }
   1.78571% { transform:translate(5px,0) }
   3.57143% { transform:translate(0,0) }
   5.35714% { transform:translate(5px,0) }
@@ -165,4 +172,15 @@ li:hover {
   8.92857% { transform:translate(5px,0) }
   10.71429% { transform:translate(0,0) }
   100% { transform:translate(0,0) }
+}
+
+@keyframes append-animate {
+	from {
+		transform: scale(0);
+		opacity: 0;
+	}
+	to {
+		transform: scale(1);
+		opacity: 1;	
+	}
 }
