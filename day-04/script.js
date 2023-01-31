@@ -49,7 +49,11 @@ function addItem(item) {
 };
 
 function storeItem(item) {
-  listOfGifts.push(item)
+  //This mutate the array
+  /* listOfGifts.push(item) */
+  
+  //This do not
+  listOfGifts = [...listOfGifts, item]
 };
 
 function deleteItemFromStorage(item) {
