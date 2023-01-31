@@ -6,17 +6,10 @@ const gift = document.querySelector('#input-gift');
 //EVENT LISTENERS
 //REMOVE GIFT WHEN I CLICK IN IT
 giftList.addEventListener('click', (event) => {
-  /* const eventGift = event.target.textContent;
-  const foundItem = listOfGifts.find(item => item === eventGift);
-  const indexItem = listOfGifts.indexOf(foundItem);
-
-  if (eventGift === foundItem) {
-    listOfGifts.splice(indexItem, 1);
-    console.log(listOfGifts)
-  }; */
-
   event.target.remove();
-  deleteItemFromStorage(event.target.textContent)
+  
+  listOfGifts = deleteItemFromStorage(event.target.textContent);
+  console.log(listOfGifts)
 });
 
 //ADD NEW GIFT
@@ -61,8 +54,7 @@ function storeItem(item) {
 
 function deleteItemFromStorage(item) {
   const indexItem = listOfGifts.indexOf(item);
-  listOfGifts.splice(indexItem, 1);
-  console.log(listOfGifts)
+  return listOfGifts.filter(element => element !== item)
 }
 
 initializeList();
