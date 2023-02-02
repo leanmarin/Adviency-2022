@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Adviency 2022</title>
+  <link rel="shortcut icon" href="/day-04/assets/favicon.svg" type="image/x-icon">
+</head>
+<body>
+  <main>
+    <h1>Lista de Regalos</h1>
+
+    <!-- Form -->
+    <form class="gift-list-form">
+      <label for="gift" class="sr-only">Regalo</label>
+      <input type="text" name="add-gift" placeholder="Agregá otro regalo" id="input-gift">
+      <input type="submit" value="Añadir" id="btn"></input>
+    </form>
+
+    <!-- Gift List -->
+    <p id="initial-message">No hay regalos Grinch! Agregá algo!</p>
+    <ul id="list-of-gifts">
+    </ul>
+
+    <button id="btn-delall">Eliminar todos</button>
+  </main>
+  <script src="/day-07/script.js"></script>
+</body>
+</html>
